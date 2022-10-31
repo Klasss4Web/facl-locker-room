@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useEffect } from "react";
 import { Form } from "../components/Form";
+import { Loading } from "../components/Loading";
 import { UsersAccountTable } from "../components/UsersAccountTable";
 import { getUsers } from "../service/getUsers";
 
@@ -13,7 +14,10 @@ export const HomePage = () => {
   useEffect(() => {
     getUsers(setLoading, setUsers);
   }, []);
-  return (
+  
+  return loading ? (
+    <Loading />
+  ) : (
     <div className="d-md-flex">
       <UsersAccountTable users={allUsers} />
       <Form setUsers={setUsers} />

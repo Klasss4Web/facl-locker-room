@@ -19,6 +19,10 @@
   border-radius: 25px;
 }
 
+.loading {
+  height: 100vh;
+}
+
 @media (max-width: 600px) {
   .users-wrapper {
     background: #987899;

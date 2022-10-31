@@ -25,7 +25,8 @@ export const Form = ({ setUsers }) => {
     const phoneExist = existing?.find(
       (user) => user?.mobileNumber === formValues?.mobileNumber
     );
-    if (emailExist || phoneExist) return;
+    if (emailExist) return alert(`${formValues.emailAddress} already exists`);
+    if (phoneExist) return alert(`${formValues.mobileNumber} already exists`);
     // If no existing data, create an array
     // Otherwise, convert the localStorage string to an array
     existing = existing ? existing : [];
@@ -36,6 +37,7 @@ export const Form = ({ setUsers }) => {
     localStorage.setItem("users", JSON.stringify(existing));
 
     setUsers((prev) => ({ ...prev, formValues }));
+    alert(`${formValues?.firstName}${" "}${formValues?.lastName} successfully added`)
   };
 
   return (
