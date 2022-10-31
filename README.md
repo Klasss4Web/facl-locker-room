@@ -1,5 +1,7 @@
 # FACL Locker Room Web
 
+`To get the best experience out of this file, read on preview mode: On the left hand side, right click on the README.md file and click "open preview"`
+
 ## About this project
 FACL locker room web is a simple responsive web app created with React and styled with Bootstrap and vanilla css. This project takes an offline first approach, Users are fetched from a remote database and users can be added to the users table, strictly on the frontend. A simple email and phone number validation was added to prevent adding duplicate users.
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
